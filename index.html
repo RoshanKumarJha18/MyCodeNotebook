@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Code Notebook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo">
+        <h1>My Code Notebook</h1>
+        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+            <img src="DARK2.svg"  alt="Dark Mode Icon"><p>Dark Mode</p>
+        </button>
+    </header>
+    <main>
+        <h4>Download Notes by CodeWithRoshan</h4>
+        <div class="cards-container">
+            <div class="card python">
+                <img src="Black Circle Icon Business Logo.png" alt="Python">
+                <h3>Python Notes</h3>
+                <p>Download Notes Here</p>
+                <div class="buttons">
+                    <a href="Python.pdf"><button>PDF Notes</button></a>
+                   
+                </div>
+            </div>
+            <div class="card c">
+                <img src="c.webp" alt="C Language">
+                <h3>C Notes</h3>
+                <p>Download Notes Here</p>
+                <div class="buttons">
+                    <a href="C_Complete_Notes.pdf"><button>PDF Notes</button></a>
+                    </div>
+            </div>
+            <div class="card android">
+                <img src="cpp.webp" alt="Android">
+                <h3>Android Notes</h3>
+                <p>Download Notes Here</p>
+                <div class="buttons">
+                    <a href="Android_CompleteNotes.pdf"><button>PDF Notes</button></a>
+                   </div>
+            </div>
+            <div class="card java ">
+                <img src="java.webp" alt="Java ">
+                <h3>Java Notes</h3>
+                <p>Download Notes Here</p>
+                <div class="buttons">
+                    <a href="Java_Complete_Notes.pdf"><button>PDF Notes</button></a>
+                   </div>
+            
+            </div>
+            <div class="card html">
+                <img src="html.webp" alt="HTML">
+                <h3>HTML Notes</h3>
+                <p>Download Notes Here</p>
+                <div class="buttons">
+                    <a href="HTML_Complete_Notes.pdf"><button>PDF Notes</button></a>
+                   </div>
+                   
+            </div>
+            <div class="card css">
+                <img src="css.webp" alt="CSS">
+                <h3>CSS Notes</h3>
+                <p>Download Notes Here</p>
+                <div class="buttons">
+                    <a href="CSS_Complete_Notes.pdf"><button>PDF Notes</button></a>
+                   </div>
+            </div>
+            <div class="card dsa">
+                <img src="dsa.webp" alt="DSA">
+                <h3>DSA Notes</h3>
+                <p>Download Notes Here</p>
+                <div class="buttons">
+                    <a href="DSA_CompleteNotes.pdf"><button>PDF Notes</button></a>
+                   </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2024 Roshan Jha. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // script.js
+
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }
+
+        toggleButton.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
